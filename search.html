@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="parkscss2.css" />
+<script>
+var parkAmen = [
+                [3,13,23,24,0,0,0,0,0,0,0,0,0,0,0],                
+                [3,5,7,8,13,14,15,20,22,24,26,27,28,29,30],
+                [2,13,18,19,20,21,22,24,28,29,30,0,0,0,0],
+                [6,18,20,21,22,23,24,0,0,0,0,0,0,0,0],                
+                [18,24,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [20,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [14,18,20,21,23,24,28,29,0,0,0,0,0,0,0],
+                [6,20,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [15,18,20,21,22,23,24,27,28,30,0,0,0,0,0],
+                [2,16,17,18,20,21,24,28,0,0,0,0,0,0,0],
+                [2,15,18,20,21,22,24,28,29,30,0,0,0,0,0],
+                [2,18,30,0,0,0,0,0,0,0,0,0,0,0,0],
+                [17,18,20,21,24,28,30,0,0,0,0,0,0,0,0],
+                [3,5,11,15,18,20,22,23,24,28,0,0,0,0,0],
+                [2,11,18,20,24,29,0,0,0,0,0,0,0,0,0],
+                [2,18,20,24,27,28,0,0,0,0,0,0,0,0,0],  
+                [16,18,20,21,24,28,0,0,0,0,0,0,0,0,0],  
+                [2,20,24,28,0,0,0,0,0,0,0,0,0,0,0],  
+                [18,20,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [9,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [1,6,18,24,25,27,28,0,0,0,0,0,0,0,0],  
+                [18,20,0,0,0,0,0,0,0,0,0,0,0,0,0],  
+                [10,16,22,24,0,0,0,0,0,0,0,0,0,0,0],  
+                [16,18,19,20,22,24,26,28,29,30,0,0,0,0,0],
+                [3,9,22,24,30,0,0,0,0,0,0,0,0,0,0], 
+                [18,20,22,23,24,26,28,30,0,0,0,0,0,0,0],  
+                [18,20,21,22,24,0,0,0,0,0,0,0,0,0,0],  
+                [20,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+                [6,16,18,20,0,0,0,0,0,0,0,0,0,0,0],
+                [2,18,20,21,22,24,28,29,0,0,0,0,0,0,0],
+                [2,17,18,20,21,24,28,0,0,0,0,0,0,0,0],
+                [18,20,24,0,0,0,0,0,0,0,0,0,0,0,0],
+                [23,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [15,17,20,22,24,0,0,0,0,0,0,0,0,0,0],
+                [3,5,13,18,20,23,24,0,0,0,0,0,0,0,0],
+                [2,18,20,21,0,0,0,0,0,0,0,0,0,0,0],
+                [11,18,22,24,26,28,0,0,0,0,0,0,0,0,0],
+                [2,18,20,21,28,0,0,0,0,0,0,0,0,0,0],
+                [3,11,24,29,30,0,0,0,0,0,0,0,0,0,0],
+                [2,18,19,20,22,24,28,0,0,0,0,0,0,0,0],
+                [12,15,18,20,21,22,23,24,28,29,30,0,0,0,0],
+                [2,18,20,23,24,28,0,0,0,0,0,0,0,0,0],
+                [11,17,18,20,24,30,0,0,0,0,0,0,0,0,0],
+                [18,20,21,24,28,0,0,0,0,0,0,0,0,0,0],
+                [16,20,24,26,0,0,0,0,0,0,0,0,0,0,0],
+                [11,13,20,24,30,0,0,0,0,0,0,0,0,0,0],
+                [2,17,18,20,21,24,27,28,0,0,0,0,0,0,0],
+                [18,20,21,22,24,0,0,0,0,0,0,0,0,0,0],
+                [11,19,20,24,28,0,0,0,0,0,0,0,0,0,0],
+                [3,11,13,23,24,0,0,0,0,0,0,0,0,0,0],
+                [2,17,18,20,24,28,0,0,0,0,0,0,0,0,0],
+                [2,4,18,20,24,28,0,0,0,0,0,0,0,0,0],
+                [17,18,20,23,24,26,28,0,0,0,0,0,0,0,0]                                   
+                ];
+var parkFound = [
+                 '<a href="albTest.html">Kathyryn Albertson</a><br><br>',                 
+                 '<a href="morrisonTest.html">Ann Morrison</a><br><br>',
+                 '<a href="baggleyTest.html">Baggley</a><br><br>',
+                 '<a href="borahParkTest.html">Borah Park</a><br><br>',
+                 '<a href="bowdenTest.html">Bowden</a><br><br>',
+                 '<a href="bowenTest.html">Bowen</a><br><br>',
+                 '<a href="camelTest.html">Camels Back</a><br><br>',
+                 '<a href="combaTest.html">Comba</a><br><br>',
+                 '<a href="cassiaTest.html">Cassia</a><br><br>',
+                 '<a href="castleHillsTest.html">CastleHills</a><br><br>',
+                 '<a href="catalpaTest.html">Catalpa</a><br><br>',
+                 '<a href="cottonWoodTest.html">Cottonwood</a><br><br>',                 
+                 '<a href="cypressTest.html">Cypress</a><br><br>',                    
+                 '<a href="juliaDavisTest.html">Julia Davis</a><br><br>',
+                 '<a href="deMeyerTest.html">Demeyer</a><br><br>', 
+                 '<a href="elmGroveTest.html">Elmgrove</a><br><br>',                  
+                 '<a href="fairmontTest.html">Fairmont</a><br><br>', 
+                 '<a href="fairviewTest.html">Fairview</a><br><br>', 
+                 '<a href="florenceTest.html">Florence</a><br><br>',
+                 '<a href="footHillsTest.html">Learning Center</a><br><br>',
+                 '<a href="fortBoiseParkTest.html">Fort Boise</a><br><br>',  
+                 '<a href="hewettTest.html">Hewett</a><br><br>', 
+                 '<a href="hillsideTest.html">Hillside</a><br><br>', 
+                 '<a href="hobbleCreekTest.html">Hobble</a><br><br>',
+                 '<a href="hyattLakeTest.html">Hyatt Lakes</a><br><br>',
+                 '<a href="ivywildTest.html">Ivywild</a><br><br>',
+                 '<a href="jullionTest.html">Jullion</a><br><br>',
+                 '<a href="kroegerTest.html">Kroeger</a><br><br>',
+                 '<a href="libertyTest.html">Liberty</a><br><br>',
+                 '<a href="lowderTest.html">Lowder</a><br><br>',
+                 '<a href="manitouTest.html">Manitou</a><br><br>',
+                 '<a href="memorialTest.html">Memorial</a><br><br>',
+                 '<a href="mooreTest.html">Moore</a><br><br>',
+                 '<a href="morrisHillTest.html">MorrisHill</a><br><br>',
+                 '<a href="municipalTest.html">Municipal</a><br><br>',
+                 '<a href="nottinghamTest.html">Nottingham</a><br><br>',
+                 '<a href="optimistTest.html">Optimist</a><br><br>',
+                 '<a href="owyheeTest.html">Owyhee</a><br><br>',
+                 '<a href="parkCenterTest.html">ParkCenter</a><br><br>',
+                 '<a href="peppermintTest.html">Peppermint</a><br><br>',
+                 '<a href="phillipiTest.html">Phillippi</a><br><br>',
+                 '<a href="quarryViewTest.html">Quarry</a><br><br>',
+                 '<a href="redwoodTest.html">Redwood</a><br><br>',
+                 '<a href="shoshoneTest.html">Shoshone</a><br><br>',
+                 '<a href="simplotComp.html">Simplot</a><br><br>',
+                 '<a href="simplotTest.html">Esther Simplot</a><br><br>', 
+                 '<a href="sunsetTest.html">Sunset</a><br><br>',
+                 '<a href="sycamoreTest.html">Sycamore</a><br><br>',
+                 '<a href="TerryDayTest.html">Terry Day</a><br><br>',
+                 '<a href="williamsTest.html">Williams</a><br><br>',
+                 '<a href="mWilliamsTest.html">WilliamsPark</a><br><br>',
+                 '<a href="willowLaneTest.html">Willowlane</a><br><br>',
+                 '<a href="winsteadTest.html">Winstead</a><br><br>' 
+                 ]; 
+var amen = [];
+var numChecked = 0;
+
+function clearAll() {   
+                     location.reload();                   
+}
+function checkAll() {
+     var boxes = document.getElementsByTagName('input');
+     for (var i = 0; i < boxes.length; i++) {
+          if (boxes[i].type == 'checkbox')
+                boxes[i].checked = true;                
+     }
+}
+
+function parkSelect() { 
+     var boxes = document.getElementsByTagName('input');
+     for (var i = 0; i < boxes.length; i++) {
+          if (boxes[i].type == 'checkbox')
+                if (boxes[i].checked == true){
+                    amen[numChecked]=i+1;
+                    numChecked = numChecked + 1;                                        
+                    boxes[i].checked = false;} 
+     }                     
+     var l = 0;
+     var n = 0;
+     var amenTest = "";
+     var amenPark = "";     
+     var selectedPark = [];
+     var nonDupPark = []; 
+     // number of parks
+     for (var j = 0; j < parkAmen.length; j++) {                
+          for (var k = 0; k < 40; k++) {
+               for (var i = 0; i < numChecked; i++) {
+                      amenTest = String(amen[i]);
+                      amenPark = String(parkAmen[j][k]);                      
+                      if(amenTest.valueOf() == amenPark.valueOf()){        
+                         selectedPark[l]=j;                         
+                         l=l+1;                          
+                         break; }                                              
+                }
+           }
+       }
+    selectedPark.sort();
+    k=0;
+    var count = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];   
+    var lastN=selectedPark[0];
+    for (i = 0; i< selectedPark.length; i++) {
+        if(selectedPark[i]==lastN){ 
+              count[k]=count[k]+1;              
+              nonDupPark[k]=selectedPark[i];              
+         }else{
+             k=k+1;
+             count[k]=count[k]+1;
+             nonDupPark[k]=selectedPark[i];
+             lastN=selectedPark[i]; 
+             }
+    }      
+      //alert(amen.length);
+     // alert(nonDupPark.length);
+      //alert(count.length);
+      var htmlText = "";      
+      for (i = 0; i < nonDupPark.length; i++) {           
+           if(count[i]==amen.length){
+              k=nonDupPark[i];              
+              htmlText=htmlText+parkFound[k];                                     
+            }                   
+      }
+     document.getElementById("ParksFound").innerHTML = htmlText;
+     document.getElementById("ParksFound").scrollIntoView();
+   for (i = 0; i < amen.length; i++) {   
+        delete amen[i];
+   } 
+   for (i = 0; i < nonDupPark.length; i++) {   
+        delete nonDupPark[i];
+   } 
+    for (i = 0; i < selectedPark.length; i++) {   
+        delete selectedPark[i];
+   }
+   for (i = 0; i < count.length; i++) {   
+        delete count[i];
+   } 
+   numChecked = 0;
+                       
+}  
+</script>
+<style>
+h4{background:SkyBlue;}
+</style>
+</head> 
+<body>
+<table border="3px">
+<tr>
+<td>
+<tr>
+<td align=center>
+<h4>Amenities</h4>
+    
+</td>
+</tr>
+<tr>
+<td>
+<h4>Search Parks</h4>
+     <span>Select an amenity to search from, then click Search to find parks that have that amenity: </span>
+<table>
+<tr>
+<td>        
+            <div class="amenitiesColumn">
+             
+             <div><input id="865" type="checkbox" value="Baseball" /><label for="865">Baseball</label></div>
+             <div><input id="861" type="checkbox" value="Basketball" /><label for="861">Basketball</label></div>
+             <div><input id="738" type="checkbox" value="Birding" /><label for="738">Birding</label></div>
+             <div><input id="925" type="checkbox" value="BMX Jump Park" /><label for="925">BMX Park</label></div>
+             <div><input id="848" type="checkbox" value="Bocce" /><label for="848">Bocce</label></div>
+             
+             <div><input id="850" type="checkbox" value="Community Garden" /><label for="850">Comm Garden</label></div>
+             <div><input id="923" type="checkbox" value="Cricket" /><label for="923">Cricket</label></div>
+             <div><input id="739" type="checkbox" value="Disc Golf" /><label for="739">Disc Golf</label></div>
+             
+             <div><input id="935" type="checkbox" value="Environmental Education" /><label for="935">Environ Ed</label></div>
+             <div><input id="922" type="checkbox" value="Equestrian" /><label for="922">Equestrian</label></div>
+             <div><input id="852" type="checkbox" value="Fishing" /><label for="852">Fishing</label></div>
+             <div><input id="867" type="checkbox" value="Football" /><label for="867">Football</label></div>
+             <div><input id="740" type="checkbox" value="Greenbelt Parking" /><label for="740">Greenbelt Parking</label></div>
+             <div><input id="936" type="checkbox" value="Outdoor Gym" /><label for="936">Gym</label></div>             
+             <div><input id="862" type="checkbox" value="Horseshoes" /><label for="862">Horseshoes</label></div>
+             
+             
+            </div>
+</td>
+<td>
+
+            <div class="amenitiesColumn">
+             
+             <div><input id="870" type="checkbox" value="Little League" /><label for="870">Little League</label></div>
+             <div><input id="851" type="checkbox" value="Dog Off-Leash Area" /><label for="851">Off Leash </label></div>
+             <div><input id="853" type="checkbox" value="Open Play Areas" /><label for="853">Open Play</label></div>
+             
+             <div><input id="855" type="checkbox" value="Pickleball" /><label for="855">Pickleball</label></div>
+             <div><input id="864" type="checkbox" value="Playground" /><label for="864">Playground</label></div>
+             
+             <div><input id="869" type="checkbox" value="Practice" /><label for="869">Practice</label></div>
+             <div><input id="857" type="checkbox" value="Public Art" /><label for="857">Public Art</label></div>
+             <div><input id="858" type="checkbox" value="Reservations" /><label for="858">Reservations</label></div>
+             <div><input id="859" type="checkbox" value="Restrooms" /><label for="859">Restrooms</label></div>
+             <div><input id="742" type="checkbox" value="Skateboard" /><label for="742">Skateboard</label></div>
+             <div><input id="868" type="checkbox" value="Soccer" /><label for="868">Soccer</label></div>
+             <div><input id="866" type="checkbox" value="Softball" /><label for="866">Softball</label></div>
+             <div><input id="860" type="checkbox" value="Tennis" /><label for="860">Tennis</label></div>
+             <div><input id="863" type="checkbox" value="Volleyball" /><label for="863">Volleyball</label></div>
+             <div><input id="934" type="checkbox" value="Walking" /><label for="934">Walking</label></div>
+             
+</td>
+</tr>
+</table>
+        
+        <div id="parksSearchControls">            
+            <button onclick="parkSelect() "id="parksClearButton">Search</button>
+            <button onclick="clearAll() "id="parksClearButton">Clear</button>
+            
+            <!--<span id="parksFound">Found: <span id="parksCount">0</span>-->
+        </div>
+    
+
+    <h4>Parks Found</h4>
+    <div id="ParksFound">
+    </div>
+    <div id="ParksEnd">
+    </div>
+</td>
+</tr>
+</table>
+</body>
+</html>
